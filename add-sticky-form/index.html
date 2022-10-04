@@ -40,28 +40,37 @@
         </header>
 
         <main>
-            <form>
-                <label>
-                    <span>Title</span>
-                    <input name="title" type="text" required placeholder="Sticky Title" />
-                </label>
-                <label>
-                    <span>Description</span>
-                    <input name="description" type="text" required placeholder="Sticky Title" />
-                </label>
-                <label>
-                    <span>Category</span>
-                    <select name="category" id="category-select">
-                        <option value="">Select A Category</option>
-                    </select>
-                </label>
-                <label>
-                    <span>Upload Image</span>
-                    <input name="sticky-image" type="file" />
-                    <img src="" alt="upload-preview" />
-                </label>
-                <button>Stick-it-up!</button>
-            </form>
+            <div id="add-sticky-form-container">
+                <form>
+                    <label>
+                        Title
+                        <input name="title" type="text" required placeholder="Sticky Title..." />
+                    </label>
+                    <label>
+                        Description
+                        <input
+                            name="description"
+                            type="text"
+                            required
+                            placeholder="Description..."
+                        />
+                    </label>
+                    <label>
+                        Category
+                        <select name="category" id="category-select">
+                            <option value="">Select A Category</option>
+                        </select>
+                    </label>
+                    <div id="image-section">
+                        <img id="image-preview" src="" alt="upload-preview" />
+                        <label id="form-image-area">
+                            Upload Image
+                            <input name="sticky-image" type="file" />
+                        </label>
+                    </div>
+                    <button>Stick-it-up!</button>
+                </form>
+            </div>
         </main>
     </body>
 </html>
