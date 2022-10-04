@@ -12,7 +12,7 @@
 
         <!-- js -->
         <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-        <script type="module" src="app.js"></script>
+        <script type="module" src="/add-sticky-form/sticky-form.js"></script>
 
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,13 +35,13 @@
             <p class="title">Stuck-Up</p>
             <nav>
                 <a href="/">Bulletin Board</a>
-                <a id="sign-out-link" href="auth">Sign Out</a>
+                <a id="sign-out-link" href="/auth">Sign Out</a>
             </nav>
         </header>
 
         <main>
             <div id="add-sticky-form-container">
-                <form>
+                <form id="add-sticky-form">
                     <label>
                         Title
                         <input name="title" type="text" required placeholder="Sticky Title..." />
@@ -62,13 +62,14 @@
                         </select>
                     </label>
                     <div id="image-section">
-                        <img id="image-preview" src="" alt="upload-preview" />
+                        <img id="image-preview" src="" alt="image-preview" />
                         <label id="form-image-area">
                             Upload Image
-                            <input name="sticky-image" type="file" />
+                            <input id="image-input" name="sticky-image" type="file" />
                         </label>
                     </div>
                     <button>Stick-it-up!</button>
+                    <p id="error-display"></p>
                 </form>
             </div>
         </main>
