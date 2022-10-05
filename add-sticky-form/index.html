@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <!-- title and favicon -->
+        <title>Supabase Web App</title>
+        <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
+
+        <!-- js -->
+        <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+        <script type="module" src="/add-sticky-form/sticky-form.js"></script>
+
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap"
+        />
+
+        <!-- css -->
+        <link rel="stylesheet" href="/styles/reset.css" />
+        <link rel="stylesheet" href="/styles/global.css" />
+        <!-- add link for page specific css -->
+        <link rel="stylesheet" href="/add-sticky-form/sticky-form.css" />
+    </head>
+
+    <body>
+        <header class="page-header">
+            <img class="logo" src="/assets/html_css_js.png" alt="logo" />
+            <p class="title">Stuck-Up</p>
+            <nav>
+                <a href="/">Bulletin Board</a>
+                <a id="sign-out-link" href="/auth">Sign Out</a>
+            </nav>
+        </header>
+
+        <main>
+            <div id="add-sticky-form-container">
+                <form id="add-sticky-form">
+                    <label>
+                        Title
+                        <input name="title" type="text" required placeholder="Sticky Title..." />
+                    </label>
+                    <label>
+                        Description
+                        <input
+                            name="description"
+                            type="text"
+                            required
+                            placeholder="Description..."
+                        />
+                    </label>
+                    <label>
+                        Category
+                        <select name="category" id="category-select">
+                            <option value="">Select A Category</option>
+                            <option value="fluff">Fluff</option>
+                            <option value="info">Info</option>
+                            <option value="pets">Pets</option>
+                            <option value="art">Art</option>
+                            <option value="music">Music</option>
+                        </select>
+                    </label>
+                    <div id="image-section">
+                        <img id="image-preview" src="" alt="image-preview" />
+                        <label id="form-image-area">
+                            Upload Image
+                            <input id="image-input" name="sticky-image" type="file" />
+                        </label>
+                    </div>
+                    <button>Stick-it-up!</button>
+                    <p id="error-display"></p>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

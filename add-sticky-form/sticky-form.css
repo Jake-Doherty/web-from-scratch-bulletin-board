@@ -1,0 +1,47 @@
+main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#add-sticky-form-container {
+    width: 600px;
+    height: 600px;
+    display: grid;
+    background: url('/assets/post-it-150262.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-items: center;
+}
+
+form {
+    width: 350px;
+    height: 350px;
+    margin-top: 80px;
+    margin-right: 75px;
+    display: grid;
+    grid-template-rows: 50px 50px 50px 1fr 25px;
+    gap: 10px;
+    font-size: 0.8em;
+}
+
+label {
+    display: grid;
+}
+
+#image-section {
+    display: grid;
+    grid-template-columns: 100px auto;
+    align-content: center;
+    justify-content: center;
+}
+
+#image-preview {
+    width: 100px;
+    height: 100px;
+}
+
+#form-image-area > input {
+    margin-left: 10px;
+}
