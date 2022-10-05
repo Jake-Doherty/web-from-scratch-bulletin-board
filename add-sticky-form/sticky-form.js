@@ -36,6 +36,7 @@ addStickyForm.addEventListener('submit', async (e) => {
 
     const sticky = {
         title: formData.get('title'),
+        category: formData.get('category'),
         description: formData.get('description'),
         image_url: url,
     };
