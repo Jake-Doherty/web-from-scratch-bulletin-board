@@ -33,6 +33,10 @@ export async function createSticky(sticky) {
     return await client.from('bulletin_board').insert(sticky).single();
 }
 
+export async function getAllStickies() {
+    return await client.from('bulletin_board').select('*').order('created_at');
+}
+
 /* Storage Functions */
 
 export async function uploadImage(bucketName, imagePath, imageFile) {
